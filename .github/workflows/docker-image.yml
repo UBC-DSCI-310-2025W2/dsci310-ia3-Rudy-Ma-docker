@@ -23,7 +23,7 @@ jobs:
       uses: docker/login-action@v3
       with: 
         username: ${{ secrets.DOCKER_USER}}
-        password: ${{ secrets.DOCKER_TOKEN}}
+        password: ${{ secrets.DOCKER_PASSWORD}}
     
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag rudester1107/rstudio-cowsay:latest
